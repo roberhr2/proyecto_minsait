@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Sostenibles - Listado</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Eventos Sostenibles">
+            <h1>Portal de Eventos Sostenibles</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="eventos.html" class="active">Eventos</a></li>
+                <li><a href="#">Registro</a></li>
+                <li><a href="#">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="eventos-main">
+        <section class="filtros">
+            <h2>Filtrar Eventos</h2>
+            <form>
+                <div class="form-group">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="todas">Todas las categorías</option>
+                        <option value="conferencia">Conferencias</option>
+                        <option value="taller">Talleres</option>
+                        <option value="actividad">Actividades</option>
+                        <option value="feria">Ferias</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <select id="fecha" name="fecha">
+                        <option value="todas">Todas las fechas</option>
+                        <option value="proximos">Próximos eventos</option>
+                        <option value="mes">Este mes</option>
+                        <option value="trimestre">Este trimestre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="ubicacion">Ubicación:</label>
+                    <select id="ubicacion" name="ubicacion">
+                        <option value="todas">Todas las ubicaciones</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="online">Online</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Aplicar Filtros</button>
+            </form>
+        </section>
+
+        <section class="listado-eventos">
+            <h2>Próximos Eventos</h2>
+            <div class="eventos-grid">
+                <article class="evento-card">
+                    <img src="images/evento1.jpg" alt="Conferencia Sostenibilidad">
+                    <div class="evento-info">
+                        <h3>Conferencia Internacional de Sostenibilidad</h3>
+                        <p class="evento-fecha">15-17 Noviembre 2025</p>
+                        <p class="evento-descripcion">Evento anual que reúne a expertos en sostenibilidad de todo el mundo para discutir soluciones innovadoras.</p>
+                        <div class="evento-meta">
+                            <span class="evento-categoria">Conferencia</span>
+                            <span class="evento-ubicacion">Madrid, España</span>
+                        </div>
+                        <a href="detalle_evento.html" class="btn">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <article class="evento-card">
+                    <img src="images/evento2.jpg" alt="Taller Reciclaje">
+                    <div class="evento-info">
+                        <h3>Taller de Reciclaje Creativo</h3>
+                        <p class="evento-fecha">22 Noviembre 2025</p>
+                        <p class="evento-descripcion">Aprende a dar una segunda vida a materiales cotidianos en este taller práctico.</p>
+                        <div class="evento-meta">
+                            <span class="evento-categoria">Taller</span>
+                            <span class="evento-ubicacion">Barcelona, España</span>
+                        </div>
+                        <a href="detalle_evento.html" class="btn">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <article class="evento-card">
+                    <img src="images/evento3.jpg" alt="Feria Ecológica">
+                    <div class="evento-info">
+                        <h3>Feria de Productos Ecológicos</h3>
+                        <p class="evento-fecha">5-7 Diciembre 2025</p>
+                        <p class="evento-descripcion">Descubre productos locales ecológicos y sostenibles directamente de sus productores.</p>
+                        <div class="evento-meta">
+                            <span class="evento-categoria">Feria</span>
+                            <span class="evento-ubicacion">Valencia, España</span>
+                        </div>
+                        <a href="detalle_evento.html" class="btn">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <article class="evento-card">
+                    <img src="images/evento4.jpg" alt="Charla Cambio Climático">
+                    <div class="evento-info">
+                        <h3>Charla: Impacto del Cambio Climático</h3>
+                        <p class="evento-fecha">10 Diciembre 2025</p>
+                        <p class="evento-descripcion">Conoce los últimos datos sobre el cambio climático y cómo afecta a nuestro entorno.</p>
+                        <div class="evento-meta">
+                            <span class="evento-categoria">Conferencia</span>
+                            <span class="evento-ubicacion">Online</span>
+                        </div>
+                        <a href="detalle_evento.html" class="btn">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <article class="evento-card">
+                    <img src="images/evento5.jpg" alt="Plantación Colectiva">
+                    <div class="evento-info">
+                        <h3>Plantación Colectiva de Árboles</h3>
+                        <p class="evento-fecha">12 Diciembre 2025</p>
+                        <p class="evento-descripcion">Únete a esta iniciativa comunitaria para reforestar una zona afectada por incendios.</p>
+                        <div class="evento-meta">
+                            <span class="evento-categoria">Actividad</span>
+                            <span class="evento-ubicacion">Sevilla, España</span>
+                        </div>
+                        <a href="detalle_evento.html" class="btn">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <article class="evento-card">
+                    <img src="images/evento6.jpg" alt="Workshop Energías Renovables">
+                    <div class="evento-info">
+                        <h3>Workshop de Energías Renovables</h3>
+                        <p class="evento-fecha">15 Enero 2026</p>
+                        <p class="evento-descripcion">Taller práctico sobre instalación y mantenimiento de paneles solares para el hogar.</p>
+                        <div class="evento-meta">
+                            <span class="evento-categoria">Taller</span>
+                            <span class="evento-ubicacion">Bilbao, España</span>
+                        </div>
+                        <a href="detalle_evento.html" class="btn">Ver Detalles</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Promovemos eventos que contribuyen a un futuro más sostenible.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>info@eventossostenibles.com</p>
+                <p>+34 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Portal de Eventos Sostenibles. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
