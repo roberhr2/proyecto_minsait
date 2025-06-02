@@ -20,6 +20,8 @@ El **Portal de Eventos Sostenibles** permite a los usuarios descubrir, explorar 
 - Estructura de carpetas organizada para imágenes, estilos y scripts
 - **Java** como lenguaje de programación
 - **MySQL** como gestor de Base de Datos
+- **VmWare** para la creación de la máquina virtual
+- La máquina es AlpineLinux con contenedores docker
 
 ## Estructura del Proyecto
 
@@ -47,13 +49,6 @@ proyecto_minsait/
 │   │   ├── carrusel.js
 │   │   └── auth.js
 │   └── images/
-│       ├── logo.png
-│       ├── facebook.png
-│       ├── twitter.png
-│       ├── instagram.png
-│       ├── conferencia.jpg
-│       ├── taller.jpg
-│       └── feria.jpg
 │
 ├── sql/
 │   └── creacion_bbdd.sql
@@ -71,6 +66,13 @@ proyecto_minsait/
 │   │   └── resources/
 │   └── test/
 │       ├── java/
+│       │   ├── CategoriaTest.java
+│       │   ├── EventoTest.java
+│       │   ├── InscripcionTest.java
+│       │   ├── MainTest.java
+│       │   ├── OrganizadorTest.java
+│       │   ├── UbicacionTest.java
+│       │   └── UsuarioTest.java
 │       └── resources/
 │
 ├── readme.md
