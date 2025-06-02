@@ -13,24 +13,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Manejo del botón de inscripción (página de detalle)
     const btnInscribirse = document.querySelector('.btn-inscribirse');
-    if (btnInscribirse) {
-        btnInscribirse.addEventListener('click', function() {
-            // Verificar si el usuario está logueado
-            const usuarioLogueado = false; // Esto debería venir de la autenticación real
-            
-            if (usuarioLogueado) {
-                // Lógica para inscribirse al evento
-                alert('¡Te has inscrito correctamente al evento!');
-                this.textContent = 'Inscrito';
-                this.classList.add('btn-secondary');
-                this.disabled = true;
-            } else {
-                // Redirigir al login o mostrar modal de registro
-                alert('Por favor, inicia sesión o regístrate para inscribirte en el evento.');
-                // window.location.href = 'login.html';
-            }
-        });
-    }
+if (btnInscribirse) {
+    btnInscribirse.addEventListener('click', function() {
+        // Verificar si el usuario está logueado
+        const usuarioLogueado = localStorage.getItem('usuarioLogueado') === 'true';
+        
+        if (usuarioLogueado) {
+            // Lógica para inscribirse al evento
+            alert('¡Te has inscrito correctamente al evento!');
+            this.textContent = 'Inscrito';
+            this.classList.add('btn-secondary');
+            this.disabled = true;
+        } else {
+            // Redirigir al login
+            alert('Por favor, inicia sesión o regístrate para inscribirte en el evento.');
+            window.location.href = 'login.html?redirect=' + encodeURIComponent(window.location.href);
+        }
+    });
+}
 
     // Efecto de hover en las tarjetas de evento
     const eventoCards = document.querySelectorAll('.evento-card, .categoria, .ponente-card');

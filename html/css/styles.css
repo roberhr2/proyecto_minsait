@@ -1,16 +1,16 @@
 /* Estilos generales */
 :root {
-    --primary-color: #2e7d32;
-    --primary-dark: #1b5e20;
-    --primary-light: #81c784;
-    --secondary-color: #ff8f00;
-    --secondary-dark: #e65100;
-    --light-color: #f5f5f5;
-    --dark-color: #333;
-    --gray-color: #757575;
-    --light-gray: #e0e0e0;
+    --primary-color: #2196f3;
+    --primary-dark: #1565c0;
+    --primary-light: #90caf9;
+    --secondary-color: #00bcd4;
+    --secondary-dark: #008ba3;
+    --light-color: #f5faff;
+    --dark-color: #222e3a;
+    --gray-color: #78909c;
+    --light-gray: #e3f2fd;
     --white: #ffffff;
-    --shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --shadow: 0 2px 5px rgba(33,150,243,0.08);
     --transition: all 0.3s ease;
 }
 
@@ -82,12 +82,18 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
 }
 
 .logo {
     display: flex;
     align-items: center;
     padding: 15px 0;
+    justify-content: center; /* Centra el logo y el título */
+    width: 100%;
+    text-align: center;
 }
 
 .logo img {
@@ -97,6 +103,8 @@ header {
 
 nav ul {
     display: flex;
+    justify-content: center; /* Centra los enlaces de navegación */
+    width: 100%;
 }
 
 nav ul li {
@@ -127,10 +135,8 @@ nav ul li a:hover:after {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
+    background: #d4f7e3;
+    color: var(--dark-color);
     text-align: center;
     padding: 100px 20px;
     margin-bottom: 40px;
@@ -215,6 +221,8 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-bottom: 30px;
+    justify-items: center; /* Centra el contenido de cada sección */
+    text-align: center;    /* Centra el texto dentro de cada sección */
 }
 
 .footer-section h3 {
@@ -651,4 +659,22 @@ footer {
     .btn {
         width: 100%;
     }
+}
+
+/* Estilos adicionales para enlaces de autenticación en el header */
+nav ul li a.auth-link {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+nav ul li a.auth-link:hover {
+    background-color: var(--primary-dark);
+    transform: none;
+}
+
+nav ul li a.auth-link:after {
+    display: none;
 }
