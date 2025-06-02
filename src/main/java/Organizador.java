@@ -6,10 +6,8 @@ public class Organizador {
     private String email;
     private String password;
 
-    // Constructor vacío
     public Organizador() {}
 
-    // Constructor con parámetros
     public Organizador(int id, String nombre, String email, String password) {
         this.id = id;
         this.nombre = nombre;
@@ -17,7 +15,14 @@ public class Organizador {
         this.password = password;
     }
     
-    // Buscar un organizador por ID en un arreglo
+    /**
+     * Busca un objeto {@code Organizador} en el arreglo proporcionado por su identificador.
+     *
+     * @param organizadores Arreglo de objetos {@code Organizador} donde se realizará la búsqueda.
+     * @param id Identificador único del organizador a buscar.
+     * @return El objeto {@code Organizador} cuyo identificador coincide con el proporcionado,
+     *         o {@code null} si no se encuentra ningún organizador con ese id.
+     */
     public static Organizador buscarPorId(Organizador[] organizadores, int id) {
         for (Organizador o : organizadores) {
             if (o != null && o.getId() == id) {
@@ -26,8 +31,14 @@ public class Organizador {
         }
         return null;
     }
-
-    // Agregar un organizador al primer espacio libre en el arreglo
+    
+    /**
+     * Agrega un nuevo objeto {@code Organizador} al arreglo.
+     *
+     * @param organizadores Arreglo de objetos {@code Organizador} donde se agregará el nuevo organizador.
+     * @param nuevo Objeto {@code Organizador} a agregar.
+     * @return {@code true} si el organizador fue agregado exitosamente, {@code false} si no hay espacio disponible.
+     */
     public static boolean agregarOrganizador(Organizador[] organizadores, Organizador nuevo) {
         for (int i = 0; i < organizadores.length; i++) {
             if (organizadores[i] == null) {
@@ -38,7 +49,13 @@ public class Organizador {
         return false;
     }
 
-    // Eliminar un organizador por ID (deja el espacio como null)
+    /**
+     * Elimina un objeto {@code Organizador} del arreglo por su identificador.
+     *
+     * @param organizadores Arreglo de objetos {@code Organizador} de donde se eliminará el organizador.
+     * @param id Identificador único del organizador a eliminar.
+     * @return {@code true} si el organizador fue eliminado exitosamente, {@code false} si no se encontró el id.
+     */
     public static boolean eliminarPorId(Organizador[] organizadores, int id) {
         for (int i = 0; i < organizadores.length; i++) {
             if (organizadores[i] != null && organizadores[i].getId() == id) {
@@ -49,7 +66,11 @@ public class Organizador {
         return false;
     }
 
-    // Mostrar todos los organizadores
+    /**
+     * Muestra todos los organizadores en el arreglo proporcionado.
+     *
+     * @param organizadores Arreglo de objetos {@code Organizador} a mostrar.
+     */
     public static void mostrarOrganizadores(Organizador[] organizadores) {
         for (Organizador o : organizadores) {
             if (o != null) {
@@ -58,7 +79,6 @@ public class Organizador {
         }
     }
 
-    // Getters y Setters
     public int getId() {
         return id;
     }
@@ -91,7 +111,6 @@ public class Organizador {
         this.password = password;
     }
 
-    // Método toString
     @Override
     public String toString() {
         return "Organizador{" +

@@ -15,8 +15,8 @@ El **Portal de Eventos Sostenibles** permite a los usuarios descubrir, explorar 
 
 ## Tecnologías Utilizadas
 
-- **HTML5** y **CSS3** (incluyendo diseño responsive)
-- **JavaScript** (para interactividad y carrusel)
+- **HTML5** y **CSS3** para la página web
+- **JavaScript** para el carrusel
 - Estructura de carpetas organizada para imágenes, estilos y scripts
 - **Java** como lenguaje de programación
 - **MySQL** como gestor de Base de Datos

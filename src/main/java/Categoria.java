@@ -4,16 +4,20 @@ public class Categoria {
     private int id;
     private String nombre;
 
-    // Constructor vacío
     public Categoria() {}
 
-    // Constructor con parámetros
     public Categoria(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }
     
-    // Buscar una categoría por ID en un arreglo
+    /**
+     * Busca una categoría por ID en un arreglo de categorías.
+     * 
+     * @param categorias arreglo de categorías donde se realizará la búsqueda.
+     * @param id identificador único de la categoría a buscar.
+     * @return la categoría encontrada o null si no se encuentra.
+     */
     public static Categoria buscarPorId(Categoria[] categorias, int id) {
         for (Categoria c : categorias) {
             if (c != null && c.getId() == id) {
@@ -23,7 +27,13 @@ public class Categoria {
         return null;
     }
 
-    // Agregar una categoría al primer espacio libre en el arreglo
+    /**
+     * Agrega una nueva categoría al primer espacio libre en el arreglo.
+     * 
+     * @param categorias arreglo de categorías donde se agregará la nueva categoría.
+     * @param nueva categoría a agregar.
+     * @return true si se agregó exitosamente, false si no hay espacio disponible.
+     */
     public static boolean agregarCategoria(Categoria[] categorias, Categoria nueva) {
         for (int i = 0; i < categorias.length; i++) {
             if (categorias[i] == null) {
@@ -34,7 +44,13 @@ public class Categoria {
         return false;
     }
 
-    // Eliminar una categoría por ID (deja el espacio como null)
+    /**
+     * Elimina una categoría por ID (deja el espacio como null).
+     * 
+     * @param categorias arreglo de categorías de donde se eliminará la categoría.
+     * @param id identificador único de la categoría a eliminar.
+     * @return true si se eliminó exitosamente, false si no se encontró el id.
+     */
     public static boolean eliminarPorId(Categoria[] categorias, int id) {
         for (int i = 0; i < categorias.length; i++) {
             if (categorias[i] != null && categorias[i].getId() == id) {
@@ -45,7 +61,11 @@ public class Categoria {
         return false;
     }
 
-    // Mostrar todas las categorías
+    /**
+     * Muestra todas las categorías no nulas en el arreglo.
+     * 
+     * @param categorias arreglo de categorías a mostrar.
+     */
     public static void mostrarCategorias(Categoria[] categorias) {
         for (Categoria c : categorias) {
             if (c != null) {
@@ -54,7 +74,6 @@ public class Categoria {
         }
     }
 
-    // Getters y Setters
     public int getId() {
         return id;
     }
@@ -71,7 +90,6 @@ public class Categoria {
         this.nombre = nombre;
     }
 
-    // Método toString
     @Override
     public String toString() {
         return "Categoria{" +

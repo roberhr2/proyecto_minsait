@@ -11,7 +11,6 @@ public class Evento {
     private int idOrganizador;
     private int idCategoria;
 
-    // Constructor
     public Evento(int id, String nombre, Date fecha, int duracion, int idUbicacion, int idOrganizador, int idCategoria) {
         this.id = id;
         this.nombre = nombre;
@@ -22,7 +21,13 @@ public class Evento {
         this.idCategoria = idCategoria;
     }
 
-    // Buscar un evento por ID en un arreglo de eventos
+    /**
+     * Busca un evento por ID en un arreglo de eventos.
+     * 
+     * @param eventos arreglo de eventos donde se realizará la búsqueda.
+     * @param id identificador único del evento a buscar.
+     * @return el evento encontrado o null si no se encuentra.
+     */
     public static Evento buscarPorId(Evento[] eventos, int id) {
         for (Evento e : eventos) {
             if (e != null && e.getId() == id) {
@@ -32,7 +37,13 @@ public class Evento {
         return null;
     }
 
-    // Agregar un evento al primer espacio libre en el arreglo
+    /**
+     * Agrega un nuevo evento al primer espacio libre en el arreglo.
+     * 
+     * @param eventos arreglo de eventos donde se agregará el nuevo evento.
+     * @param nuevo evento a agregar.
+     * @return true si se agregó exitosamente, false si no hay espacio disponible.
+     */
     public static boolean agregarEvento(Evento[] eventos, Evento nuevo) {
         for (int i = 0; i < eventos.length; i++) {
             if (eventos[i] == null) {
@@ -43,7 +54,13 @@ public class Evento {
         return false; // No hay espacio
     }
 
-    // Eliminar un evento por ID (deja el espacio como null)
+    /**
+     * Elimina un evento por ID (deja el espacio como null).
+     * 
+     * @param eventos arreglo de eventos de donde se eliminará el evento.
+     * @param id identificador único del evento a eliminar.
+     * @return true si se eliminó exitosamente, false si no se encontró el id.
+     */
     public static boolean eliminarPorId(Evento[] eventos, int id) {
         for (int i = 0; i < eventos.length; i++) {
             if (eventos[i] != null && eventos[i].getId() == id) {
@@ -54,7 +71,11 @@ public class Evento {
         return false;
     }
 
-    // Mostrar todos los eventos
+    /**
+     * Muestra todos los eventos no nulos en el arreglo proporcionado.
+     * 
+     * @param eventos arreglo de eventos a mostrar.
+     */
     public static void mostrarEventos(Evento[] eventos) {
         for (Evento e : eventos) {
             if (e != null) {
@@ -63,7 +84,6 @@ public class Evento {
         }
     }
 
-    // Getters y Setters
     public int getId() {
         return id;
     }

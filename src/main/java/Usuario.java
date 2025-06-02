@@ -6,7 +6,6 @@ public class Usuario {
     private String email;
     private String password;
 
-    // Constructor
     public Usuario(int id, String nombre, String email, String password) {
         this.id = id;
         this.nombre = nombre;
@@ -14,6 +13,13 @@ public class Usuario {
         this.password = password;
     }
 
+    /**
+     * Busca un usuario por su ID en el arreglo proporcionado.
+     * 
+     * @param usuarios arreglo de usuarios donde se realizará la búsqueda.
+     * @param id identificador único del usuario a buscar.
+     * @return el usuario encontrado o null si no se encuentra.
+     */
     public static Usuario buscarPorId(Usuario[] usuarios, int id) {
         for (Usuario u : usuarios) {
             if (u != null && u.getId() == id) {
@@ -23,6 +29,13 @@ public class Usuario {
         return null;
     }
 
+    /**
+     * Agrega un nuevo usuario al primer espacio libre en el arreglo.
+     * 
+     * @param usuarios arreglo de usuarios donde se agregará el nuevo usuario.
+     * @param nuevo usuario a agregar.
+     * @return true si se agregó exitosamente, false si no hay espacio disponible.
+     */
     public static boolean agregarUsuario(Usuario[] usuarios, Usuario nuevo) {
         for (int i = 0; i < usuarios.length; i++) {
             if (usuarios[i] == null) {
@@ -33,6 +46,13 @@ public class Usuario {
         return false;
     }
 
+    /**
+     * Elimina un usuario por su ID (deja el espacio como null).
+     * 
+     * @param usuarios arreglo de usuarios de donde se eliminará el usuario.
+     * @param id identificador único del usuario a eliminar.
+     * @return true si se eliminó exitosamente, false si no se encontró el id.
+     */
     public static boolean eliminarPorId(Usuario[] usuarios, int id) {
         for (int i = 0; i < usuarios.length; i++) {
             if (usuarios[i] != null && usuarios[i].getId() == id) {
@@ -43,6 +63,11 @@ public class Usuario {
         return false;
     }
 
+    /**
+     * Muestra todos los usuarios en el arreglo proporcionado.
+     * 
+     * @param usuarios arreglo de usuarios a mostrar.
+     */
     public static void mostrarUsuarios(Usuario[] usuarios) {
         for (Usuario u : usuarios) {
             if (u != null) {
@@ -51,7 +76,6 @@ public class Usuario {
         }
     }
 
-    // Getters y Setters
     public int getId() {
         return id;
     }
